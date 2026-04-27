@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "userId": "user-dev-1",
+      "name": "Dev User 1"
+    }
+  ],
+  "topics": [
+    {
+      "id": "topic-dev-1",
+      "name": "Development Topic",
+      "description": "A development topic for testing"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-dev-1",
+      "name": "Development Module",
+      "description": "A development module",
+      "defaultQuestionCount": 10,
+      "defaultDurationMinutes": 30,
+      "passingScore": 70
+    }
+  ],
+  "moduleTopics": [
+    {
+      "moduleId": "module-dev-1",
+      "topicId": "topic-dev-1",
+      "percentage": 100
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-dev-1",
+      "topicId": "topic-dev-1",
+      "text": "Sample question for development?",
+      "explanation": "This is a sample question used during development.",
+      "durationSeconds": 30,
+      "difficulty": "easy"
+    }
+  ],
+  "options": [
+    {
+      "id": "opt-dev-1",
+      "questionId": "q-dev-1",
+      "text": "Correct answer",
+      "isAnswer": true,
+      "displayOrder": 0
+    },
+    {
+      "id": "opt-dev-2",
+      "questionId": "q-dev-1",
+      "text": "Wrong answer 1",
+      "isAnswer": false,
+      "displayOrder": 1
+    },
+    {
+      "id": "opt-dev-3",
+      "questionId": "q-dev-1",
+      "text": "Wrong answer 2",
+      "isAnswer": false,
+      "displayOrder": 2
+    }
+  ]
+}

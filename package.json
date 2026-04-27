@@ -1,0 +1,35 @@
+{
+  "name": "cloud-cert-drill",
+  "version": "0.0.1",
+  "description": "Local-first desktop training app for certification exam practice",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend",
+    "initializer",
+    "desktop"
+  ],
+  "scripts": {
+    "dev": "npm run init:db && concurrently \"npm -w backend run dev\" \"npm -w frontend run dev\" \"npm -w desktop run dev\"",
+    "dev:backend": "npm run init:db && npm -w backend run dev",
+    "init:db": "npm -w initializer run init",
+    "migrate:db": "npm -w initializer run migrate",
+    "seed:db": "npm -w initializer run seed",
+    "validate:db": "npm -w initializer run validate",
+    "status:db": "npm -w initializer run status",
+    "reset:db:dev": "npm -w initializer run reset:dev",
+    "build": "npm -ws run build",
+    "test": "npm -ws run test",
+    "package": "npm -w desktop run package",
+    "lint": "npm -ws run lint",
+    "type-check": "npm -ws run type-check"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

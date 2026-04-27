@@ -1,0 +1,27 @@
+{
+  "name": "@cloud-cert-drill/initializer",
+  "version": "0.0.1",
+  "description": "Database initializer, migrator, and seeder for CloudCert Drill",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "init": "tsx src/index.ts init",
+    "migrate": "tsx src/index.ts migrate",
+    "seed": "tsx src/index.ts seed",
+    "validate": "tsx src/index.ts validate",
+    "status": "tsx src/index.ts status",
+    "reset:dev": "tsx src/index.ts reset:dev --seed",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
